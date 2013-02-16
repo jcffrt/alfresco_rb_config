@@ -102,6 +102,13 @@
                         <tokenised>true</tokenised>
                     </index>	
                 </property>
+                <property name="rb:persona_resp">
+                    <type>d:text</type>
+                    <index enabled="true">
+						<stored>true</stored>
+						<tokenised>true</tokenised>
+                    </index>	
+                </property>
                 <property name="rb:respondida">
                     <type>d:boolean</type>
                     <index enabled="false">

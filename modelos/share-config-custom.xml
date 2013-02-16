@@ -59,6 +59,7 @@
 				<show id="rb:respuesta_req" />
 				<show id="rb:fecha_resp" />
 				<show id="rb:area_resp" />
+				<show id="rb:persona_resp" />
 				<show id="rb:respondida" />
 			   
                <!-- cm:dublincore aspect -->
@@ -185,6 +186,7 @@
 				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" />
 				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" />
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" />
+				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" />
 				<field id="rb:respondida" label-id="prop.rb_respondida" />
 			   
                <field id="cm:originator" read-only="true" />
@@ -216,6 +218,7 @@
 				<show id="rb:respuesta_req" />
 				<show id="rb:fecha_resp" />
 				<show id="rb:area_resp" />
+				<show id="rb:persona_resp" />
 				<show id="rb:respondida" />
 			   
 			   <!-- rb:oficio -->
@@ -260,6 +263,7 @@
 				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" />
 				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" />
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" />
+				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" />
 				<field id="rb:respondida" label-id="prop.rb_respondida" />
 							   
 			   <field id="rb:documentosRelacionados" labelid="assoc.rb_documentosRelacionados" />
@@ -283,6 +287,7 @@
 				<show id="rb:respuesta_req" />
 				<show id="rb:fecha_resp" />
 				<show id="rb:area_resp" />
+				<show id="rb:persona_resp" />
 				<show id="rb:respondida" />
 
 			   <!-- rb:oficio -->
@@ -314,6 +319,7 @@
 				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" />
 				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" />
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" />
+				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" />
 				<field id="rb:respondida" label-id="prop.rb_respondida" />
 							   
 			   <field id="rb:documentosRelacionados" labelid="assoc.rb_documentosRelacionados" />
@@ -355,6 +361,7 @@
 					<show id="rb:respuesta_req" />
 					<show id="rb:fecha_resp" />
 					<show id="rb:area_resp" />
+					<show id="rb:persona_resp" />
 					<show id="rb:respondida" />
 				</field-visibility>
 				<appearance>
@@ -392,7 +399,12 @@
 						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
 					</field>
 					<field id="rb:area_resp" label-id="prop.rb_area_resp">
-						<control template="/org/alfresco/components/form/controls/category.ftl" />
+						<control template="/org/alfresco/components/form/controls/category.ftl"> 
+							<control-param name="parentNodeRef">e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
+						</control>
+					</field>
+					<field id="rb:persona_resp" label-id="prop.rb_persona_resp">
+						<control template="/org/alfresco/components/form/controls/authority.ftl" />
 					</field>
 					<field id="rb:respondida" label-id="prop.rb_respondida">
 						<control template="/org/alfresco/components/form/controls/checkbox.ftl" />
