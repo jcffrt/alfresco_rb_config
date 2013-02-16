@@ -1,0 +1,27 @@
+Para el modelo:
+
+- In
+/opt/tomcats/webapps/alfresco/WEB-INF/classes/alfresco/extension
+rb-model-context.xml
+
+- In
+/opt/tomcats/webapps/alfresco/WEB-INF/classes/alfresco/extension/model
+rbModel.xml
+
+
+Para configuraciòn del interfaz de usuario:
+
+- In
+/opt/tomcat/webapps/share/WEB-INF/classes/alfresco/web-extension/
+share-config-custom.xml
+
+Para localizaciòn de literales:
+
+- In
+/opt/tomcat/webapps/share/WEB-INF/classes/alfresco/web-extension/
+custom-slingshot-application-context.xml
+
+
+- In
+/opt/tomcat/webapps/share/WEB-INF/classes/alfresco/web-extension/messages
+rbModel.properties
