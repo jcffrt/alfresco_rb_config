@@ -1,0 +1,55 @@
+Instalar Java 7
+Instalar Tomcat manualmente:
+>  wget http://apache.osuosl.org/tomcat/tomcat-7/v7.0.35/bin/apache-tomcat-7.0.35.tar.gz
+>  tar xvzf apache-tomcat-7.0.35.tar.gz
+>  sudo mv apache-tomcat-7.0.35 /opt/tomcat
+
+Copiar ficheros:
+/opt/alfresco/bin/catalina.sh
+
+/opt/alfresco/conf/tomcat-users.xml
+
+/opt/alfresco/conf/server.xml
+
+/opt/alfresco/conf/catalina.properties
+
+Cambiar /etc/init.d al nuevo directorio tomcat (alfresco)
+sudo update-rc.d tomcat defaults
+
+Deploy wars de Alfresco con tomcat manager
+
+Setup shared directory:
+>  cd
+>  cd alfresco/web-server
+>  sudo cp -r shared /opt/alfresco/
+sudo cp -r bin /opt/alfresco/
+
+
+Copiar ficheros de utilidades:
+>  cd /opt/alfresco/shared/classes/alfresco/extension/
+>  sudo cp video-thumbnail-context.xml.sample video-thumbnail-context.xml
+>  sudo cp video-transformation-context.xml.sample video-transformation-context.xml
+
+
+/opt/alfresco/shared/classes/alfresco-global.properties
+
+instalar googledocs:
+sudo java -jar /opt/alfresco/bin/alfresco-mmt.jar install /home/ubuntu/googledocs/alfresco-googledocs-repo-2.0.1-14.amp /opt/alfresco/webapps/alfresco.war
+sudo java -jar /opt/alfresco/bin/alfresco-mmt.jar install /home/ubuntu/googledocs/alfresco-googledocs-share-2.0.1-14.amp /opt/alfresco/webapps/share.war
+
+Instalar Records Management:
+poner en /opt/alfresco/amps/alfresco-rm-xxx.amp 
+y
+/opt/alfresco/amps-share/alfresco-rm-share-xxx.amp
+
+sudo /opt/alfresco/bin/apply_amps.sh -nobackup -force
+
+Añadir a 
+sudo nano /opt/alfresco/webapps/share/WEB-INF/classes/alfresco/site-webscripts/org/alfresco/rm/components/documentlibrary/documentlist.get.head.ftl 
+Las lineas:
+<@script type="text/javascript" src="${url.context}/res/components/documentlibrary/documentlist-view-detailed.js"></@script> 
+<@script type="text/javascript" src="${url.context}/res/components/documentlibrary/documentlist-view-simple.js"></@script> 
+<@script type="text/javascript" src="${url.context}/res/components/documentlibrary/documentlist-view-gallery.js"></@script> 
+<@script type="text/javascript" src="${url.context}/res/yui/slider/slider.js"></@script> 
+
+
