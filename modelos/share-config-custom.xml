@@ -406,49 +406,39 @@
 						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
 					</field>
 					<!-- rb:oficio -->
-					<field id="rb:tema" label-id="prop.rb_tema">
+					<field id="rb:tema" label-id="prop.rb_tema" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
-						<set="datos_oficio" />
 					</field>
-					<field id="rb:destinatario" label-id="prop.rb_destinatario">
+					<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
-						<set="datos_oficio" />
 					</field>   
-					<field id="rb:remitente" label-id="prop.rb_remitente">
+					<field id="rb:remitente" label-id="prop.rb_remitente" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
-						<set="datos_oficio" />
 					</field>
-					<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext">
+					<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
-						<set="datos_oficio" />
 					</field>
-					<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado">
+					<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
-						<set="datos_oficio" />
 					</field>
-					<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req">
+					<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/checkbox.ftl" />
-						<set="datos_oficio" />
 					</field>
-					<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp">
+					<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
-						<set="datos_oficio" />
 					</field>
-					<field id="rb:area_resp" label-id="prop.rb_area_resp">
+					<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/category.ftl"> 
 							<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
-							<set="datos_oficio" />
 						</control>
 					</field>
 					<!--
-					<field id="rb:persona_resp" label-id="prop.rb_persona_resp">
+					<field id="rb:persona_resp" label-id="prop.rb_persona_resp" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/authority.ftl" />
-						<set="datos_oficio" />
 					</field>
 					-->
-					<field id="rb:respondida" label-id="prop.rb_respondida">
+					<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/checkbox.ftl" />
-						<set="datos_oficio" />
 					</field>
 	
 				</appearance>
