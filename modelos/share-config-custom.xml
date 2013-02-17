@@ -185,6 +185,7 @@
 				<field id="rb:tema" label-id="prop.rb_tema" set="datos_oficio" />
 				<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio" >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
+					<!-- Configuramos la categorìa para que se inicie en el nodo de "Entidades" -->
 						<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
 					</control>
 				</field>
@@ -202,6 +203,7 @@
 				-->
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
+					<!-- Configuramos la categorìa para que se inicie en el nodo de "Areas de Empresa" -->
 						<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
 					</control>
 				</field>
@@ -285,6 +287,7 @@
 				<field id="rb:tema" label-id="prop.rb_tema" set="datos_oficio"  />
 				<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio"  >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
+					<!-- Configuramos la categorìa para que se inicie en el nodo de "Entidades" -->
 						<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
 					</control>
 				</field>
@@ -302,6 +305,7 @@
 				-->
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
+					<!-- Configuramos la categorìa para que se inicie en el nodo de "Areas de Empresa" -->
 						<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
 					</control>
 				</field>
@@ -364,6 +368,7 @@
 				<field id="rb:tema" label-id="prop.rb_tema" set="datos_oficio"  />
 				<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio"  >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
+					<!-- Configuramos la categorìa para que se inicie en el nodo de "Entidades" -->
 						<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
 					</control>
 				</field>
@@ -381,6 +386,7 @@
 				-->
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
+					<!-- Configuramos la categorìa para que se inicie en el nodo de "Areas de Empresa" -->
 						<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
 					</control>
 				</field>
@@ -456,6 +462,7 @@
 					</field>
 					<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/category.ftl"> 
+						<!-- Configuramos la categorìa para que se inicie en el nodo de "Entidades" -->
 							<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
 						</control>
 					</field>
@@ -478,6 +485,7 @@
 					</field>
 					<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/category.ftl"> 
+						<!-- Configuramos la categorìa para que se inicie en el nodo de "Areas de Empresa" -->
 							<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
 						</control>
 					</field>
