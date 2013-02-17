@@ -189,13 +189,20 @@
 				<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" set="datos_oficio"  />
 				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" set="datos_oficio"  />
 				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" set="datos_oficio"  />
+				<!--
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio"  />
+				-->
+				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
+					<control template="/org/alfresco/components/form/controls/category.ftl"> 
+						<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
+					</control>
+				</field>
 				<!--
 				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" set="datos_oficio"  />
 				-->
 				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
-				
 				<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio"  />
+			   
 			   
                <field id="cm:originator" read-only="true" />
                <field id="cm:addressee" read-only="true" />
