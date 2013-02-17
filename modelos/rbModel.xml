@@ -53,7 +53,7 @@
                     </index>
                 </property>
                 <property name="rb:destinatario">
-                    <type>d:text</type>
+                    <type>d:category</type>
                     <index enabled="true">
                         <atomic>true</atomic>
                         <stored>true</stored>
@@ -61,7 +61,7 @@
                     </index>	
                 </property>
 				<property name="rb:remitente">
-                    <type>d:text</type>
+                    <type>d:category</type>
                     <index enabled="true">
                         <atomic>true</atomic>
                         <stored>true</stored>
