@@ -59,8 +59,11 @@
 				<show id="rb:respuesta_req" />
 				<show id="rb:fecha_resp" />
 				<show id="rb:area_resp" />
+				<!--
 				<show id="rb:persona_resp" />
+				-->
 				<show id="rb:respondida" />
+				<show id="rb:personaResp" />
 			   
                <!-- cm:dublincore aspect -->
                <show id="cm:publisher"/>
@@ -144,6 +147,7 @@
 			   
             </field-visibility>
             <appearance>
+				<set id="datos_oficio" appearance="panel" label-id="panel.rb_datosOficio" />
                <field id="cm:name">
                  <control>
                     <control-param name="maxLength">255</control-param>
@@ -178,16 +182,20 @@
                </field>
 			   
 			   			   <!-- atributos de rb:oficio -->
-				<field id="rb:tema" label-id="prop.rb_tema" />
-				<field id="rb:destinatario" label-id="prop.rb_destinatario" />
-				<field id="rb:remitente" label-id="prop.rb_remitente" />
-				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" />
-				<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" />
-				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" />
-				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" />
-				<field id="rb:area_resp" label-id="prop.rb_area_resp" />
-				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" />
-				<field id="rb:respondida" label-id="prop.rb_respondida" />
+				<field id="rb:tema" label-id="prop.rb_tema" set="datos_oficio" />
+				<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio"  />
+				<field id="rb:remitente" label-id="prop.rb_remitente" set="datos_oficio"  />
+				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio"  />
+				<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" set="datos_oficio"  />
+				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" set="datos_oficio"  />
+				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" set="datos_oficio"  />
+				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio"  />
+				<!--
+				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" set="datos_oficio"  />
+				-->
+				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
+				
+				<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio"  />
 			   
                <field id="cm:originator" read-only="true" />
                <field id="cm:addressee" read-only="true" />
@@ -195,7 +203,7 @@
                <field id="cm:sentdate" read-only="true" />
                <field id="cm:subjectline" read-only="true" />
 			   
-			   <field id="rb:documentosRelacionados" labelid="assoc.rb_documentosRelacionados" />
+			   <field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  />
             </appearance>
          </form>
 
@@ -209,7 +217,7 @@
                <show id="cm:taggable" for-mode="edit" force="true" />
                <show id="cm:categories" />
 			   
-			   			   <!-- atributos de rb:oficio -->
+				<!-- atributos de rb:oficio -->
 				<show id="rb:tema" />
 				<show id="rb:destinatario" />
 				<show id="rb:remitente" />
@@ -218,8 +226,11 @@
 				<show id="rb:respuesta_req" />
 				<show id="rb:fecha_resp" />
 				<show id="rb:area_resp" />
+				<!--
 				<show id="rb:persona_resp" />
+				-->
 				<show id="rb:respondida" />
+				<show id="rb:personaResp" />
 			   
 			   <!-- rb:oficio -->
 			   <show id="rb:documentosRelacionados" />
@@ -227,6 +238,7 @@
             </field-visibility>
             <edit-form template="../documentlibrary/forms/doclib-simple-metadata.ftl" />
             <appearance>
+				<set id="datos_oficio" appearance="panel" label-id="panel.rb_datosOficio" />
                <field id="cm:name">
                  <control>
                     <control-param name="maxLength">255</control-param>
@@ -255,18 +267,22 @@
                </field>
 			   	
 				<!-- atributos de rb:oficio -->
-				<field id="rb:tema" label-id="prop.rb_tema" />
-				<field id="rb:destinatario" label-id="prop.rb_destinatario" />
-				<field id="rb:remitente" label-id="prop.rb_remitente" />
-				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" />
-				<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" />
-				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" />
-				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" />
-				<field id="rb:area_resp" label-id="prop.rb_area_resp" />
-				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" />
-				<field id="rb:respondida" label-id="prop.rb_respondida" />
+				<field id="rb:tema" label-id="prop.rb_tema" set="datos_oficio"  />
+				<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio"  />
+				<field id="rb:remitente" label-id="prop.rb_remitente" set="datos_oficio"  />
+				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio"  />
+				<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" set="datos_oficio"  />
+				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" set="datos_oficio"  />
+				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" set="datos_oficio"  />
+				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio"  />
+				<!--
+				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" set="datos_oficio"  />
+				-->
+				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
+				
+				<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio"  />
 							   
-			   <field id="rb:documentosRelacionados" labelid="assoc.rb_documentosRelacionados" />
+			   <field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  />
             </appearance>
          </form>
          
@@ -287,14 +303,18 @@
 				<show id="rb:respuesta_req" />
 				<show id="rb:fecha_resp" />
 				<show id="rb:area_resp" />
+				<!--
 				<show id="rb:persona_resp" />
+				-->
 				<show id="rb:respondida" />
-
+				<show id="rb:personaResp" />
+				
 			   <!-- rb:oficio -->
 			   <show id="rb:documentosRelacionados" />				
 
 			   </field-visibility>
             <appearance>
+				<set id="datos_oficio" appearance="panel" label-id="panel.rb_datosOficio" />
                <field id="cm:name">
                  <control>
                     <control-param name="maxLength">255</control-param>
@@ -311,18 +331,22 @@
                </field>
 			   
 			   			   			   <!-- atributos de rb:oficio -->
-				<field id="rb:tema" label-id="prop.rb_tema" />
-				<field id="rb:destinatario" label-id="prop.rb_destinatario" />
-				<field id="rb:remitente" label-id="prop.rb_remitente" />
-				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" />
-				<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" />
-				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" />
-				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" />
-				<field id="rb:area_resp" label-id="prop.rb_area_resp" />
-				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" />
-				<field id="rb:respondida" label-id="prop.rb_respondida" />
+				<field id="rb:tema" label-id="prop.rb_tema" set="datos_oficio"  />
+				<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio"  />
+				<field id="rb:remitente" label-id="prop.rb_remitente" set="datos_oficio"  />
+				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio"  />
+				<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" set="datos_oficio"  />
+				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" set="datos_oficio"  />
+				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" set="datos_oficio"  />
+				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio"  />
+				<!--
+				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" set="datos_oficio"  />
+				-->
+				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
+				
+				<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio"  />
 							   
-			   <field id="rb:documentosRelacionados" labelid="assoc.rb_documentosRelacionados" />
+			   <field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  />
             </appearance>
          </form>
       </forms>
@@ -361,10 +385,15 @@
 					<show id="rb:respuesta_req" />
 					<show id="rb:fecha_resp" />
 					<show id="rb:area_resp" />
+					<!--
 					<show id="rb:persona_resp" />
+					-->
 					<show id="rb:respondida" />
+					<show id="rb:personaResp" />
+					
 				</field-visibility>
 				<appearance>
+					<set id="datos_oficio" appearance="panel" label-id="panel.rb_datosOficio" />
 					<field id="mimetype">
 						<control template="/org/alfresco/components/form/controls/mimetype.ftl" />
 					</field>
@@ -379,35 +408,47 @@
 					<!-- rb:oficio -->
 					<field id="rb:tema" label-id="prop.rb_tema">
 						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+						<set="datos_oficio" />
 					</field>
 					<field id="rb:destinatario" label-id="prop.rb_destinatario">
 						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+						<set="datos_oficio" />
 					</field>   
 					<field id="rb:remitente" label-id="prop.rb_remitente">
 						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+						<set="datos_oficio" />
 					</field>
 					<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext">
 						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+						<set="datos_oficio" />
 					</field>
 					<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado">
 						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+						<set="datos_oficio" />
 					</field>
 					<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req">
 						<control template="/org/alfresco/components/form/controls/checkbox.ftl" />
+						<set="datos_oficio" />
 					</field>
 					<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp">
 						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+						<set="datos_oficio" />
 					</field>
 					<field id="rb:area_resp" label-id="prop.rb_area_resp">
 						<control template="/org/alfresco/components/form/controls/category.ftl"> 
-							<control-param name="parentNodeRef">e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
+							<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
+							<set="datos_oficio" />
 						</control>
 					</field>
+					<!--
 					<field id="rb:persona_resp" label-id="prop.rb_persona_resp">
 						<control template="/org/alfresco/components/form/controls/authority.ftl" />
+						<set="datos_oficio" />
 					</field>
+					-->
 					<field id="rb:respondida" label-id="prop.rb_respondida">
 						<control template="/org/alfresco/components/form/controls/checkbox.ftl" />
+						<set="datos_oficio" />
 					</field>
 	
 				</appearance>
