@@ -168,20 +168,30 @@
                 </property>
             </properties>
         </aspect>
-	<!--
-        <aspect name="sc:productRelated">
-            <title>Someco Product Metadata</title>
+        <aspect name="rb:oficioSaliente">
+            <title>Oficio Saliente</title>
             <properties>
-                <property name="sc:product">
-                    <type>d:text</type>
+                <property name="rb:borradorContOk">
+                    <type>d:boolean</type>
                     <mandatory>true</mandatory>
                 </property>
-                <property name="sc:version">
-                    <type>d:text</type>
+				<property name="rb:borradorJurOk">
+                    <type>d:boolean</type>
+                    <mandatory>true</mandatory>
+                </property>
+				<property name="rb:aprobado">
+                    <type>d:boolean</type>
+                    <mandatory>true</mandatory>
+                </property>
+				<property name="rb:firmado">
+                    <type>d:boolean</type>
+                    <mandatory>true</mandatory>
+                </property>
+				<property name="rb:radicado">
+                    <type>d:boolean</type>
                     <mandatory>true</mandatory>
                 </property>
             </properties>
         </aspect>
-    -->
 	</aspects>
 </model>
