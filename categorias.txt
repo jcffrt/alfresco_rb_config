@@ -1,0 +1,149 @@
+Raíz de categorías
+ 
+Areas de Empresa
+ 
+	Comunicaciones
+	 
+	Desarrollo de Negocio
+	 
+	Financiera Administrativa
+	 
+	Jurídica
+	 
+	Operaciones
+	 
+		Dirección Estaciones
+		 
+		Dirección Experiencia en Servicio
+		 
+		Dirección Gestión Humana
+		 
+		Dirección Procesos y Control de Gestión
+		 
+		Dirección Red Externa
+		 
+		Seguridad Física
+		 
+		Presidencia
+	 
+	Tecnología
+	 
+		Dirección Soporte y Mantenimiento
+		 
+			Centro Especializado de Soporte
+			 
+			Mantenimiento Correctivo
+			 
+			Mantenimiento Preventivo
+			 
+			Mesa de Ayuda
+		 
+		Dirección Técnica
+			 
+			Control de Flota
+			 
+			Gestión de Recaudo
+			 
+			Infraestructura
+			 
+			Instalaciones
+		 
+		Seguridad de la Información
+		 
+		TIC Internas
+		
+		Calidad y Procesos
+	 
+Entidades
+ 
+	Banca
+	 
+		Banco Caja Social
+		 
+		Davivienda
+		 
+		IFC World Bank
+		 
+		KExim Bank
+	 
+	Entes de Control
+	 
+		Alcaldía
+		 
+		Contraloría de la Nación
+		 
+		Contraloría del Distrito
+		 
+		Interventoría
+		 
+		Otros Entes de Control
+		 
+		Procuraduría
+		 
+	Operadores Buses
+	 
+		Consorcio Express
+		 
+		Coobus
+		 
+		Egobus
+		 
+		Este Es Mi Bus
+		 
+		ETIB
+		 
+		GMovil
+		 
+		Masivo Capital
+		 
+		Otros Operadores de Buses
+		 
+		Suma
+		 
+		Tranzit
+		 
+	Otras Entidades
+	 
+	Proveedores
+	 
+		Allus
+		 
+		Atlas
+		 
+		Consultores
+		 
+			GSD Plus
+			 
+			Vettica
+			 
+		Data Tools
+		 
+		G4S
+		 
+		Itelca
+		 
+		LG
+		 
+		Metal-Redes
+		 
+		Otros proveedores
+		 
+		Telecomunicaciones
+		 
+			Avantel
+			 
+			Claro
+			 
+			ETB
+			 
+			Movistar
+			 
+			Telmex
+			 
+			Tigo
+			 
+			Une
+		 
+	Recaudo Bogotá
+	 
+	Transmilenio

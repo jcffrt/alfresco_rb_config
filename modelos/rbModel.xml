@@ -131,22 +131,44 @@
 					</target>
                 </association>
             </associations>
+            <mandatory-aspects>
+                <aspect>rb:relevante</aspect>
+				<aspect>rb:revisable</aspect>
+            </mandatory-aspects>
         </type>
     </types>
     <aspects>
-	<!--
-        <aspect name="sc:webable">
-            <title>Someco Webable</title>
+        <aspect name="rb:relevante">
+            <title>Relevancia</title>
             <properties>
-                <property name="sc:published">
-                    <type>d:date</type>
+                <property name="rb:relevancia">
+                    <type>d:text</type>
+					<default>Media</default>
+					<constraints>
+						<constraint type="LIST">
+							<parameter name="allowedValues">
+								<list>
+									<value>Alta</value>
+									<value>Media</value>
+									<value>Baja</value>
+								</list>
+							</parameter>
+							<parameter name="caseSensitive"><value>false</value></parameter>
+						</constraint>
+					</constraints>
                 </property>
-                <property name="sc:isActive">
+            </properties>
+        </aspect>
+        <aspect name="rb:revisable">
+            <title>Revisable</title>
+            <properties>
+				<property name="rb:revisado">
                     <type>d:boolean</type>
                     <default>false</default>
                 </property>
             </properties>
         </aspect>
+	<!--
         <aspect name="sc:productRelated">
             <title>Someco Product Metadata</title>
             <properties>

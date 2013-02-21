@@ -29,6 +29,7 @@ Copiar ficheros de utilidades:
 >  cd /opt/alfresco/shared/classes/alfresco/extension/
 >  sudo cp video-thumbnail-context.xml.sample video-thumbnail-context.xml
 >  sudo cp video-transformation-context.xml.sample video-transformation-context.xml
+copiar driver postgres a lib
 
 
 /opt/alfresco/shared/classes/alfresco-global.properties

@@ -6,6 +6,8 @@
         <aspects>
             <!-- Aspects that a user can see -->
             <visible>
+				<aspect name="rb:relevante" />
+				<aspect name="rb:revisable" />
 			<!--
                 <aspect name="sc:webable" />
                 <aspect name="sc:productRelated" />            
@@ -14,8 +16,7 @@
             <!-- Aspects that a user can add. Same as "visible" if left empty -->
             <addable>
             </addable>
-            <!-- Aspects that a user can remove. Same as "visible" if left empty
--->
+            <!-- Aspects that a user can remove. Same as "visible" if left empty -->
             <removeable>
             </removeable>
         </aspects>
@@ -64,6 +65,10 @@
 				-->
 				<show id="rb:respondida" />
 				<show id="rb:personaResp" />
+				<!-- atributos de aspects si son aplicados -->
+				<show id="rb:relevancia" />
+				<show id="rb:revisado" />
+				
 			   
                <!-- cm:dublincore aspect -->
                <show id="cm:publisher"/>
@@ -186,12 +191,12 @@
 				<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio" >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
 					<!-- Configuramos la categorìa para que se inicie en el nodo de "Entidades" -->
-						<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
+						<control-param name="parentNodeRef">workspace://SpacesStore/ab0e64a2-96a4-4c09-b316-d97b280a6ab3</control-param>
 					</control>
 				</field>
 				<field id="rb:remitente" label-id="prop.rb_remitente" set="datos_oficio"  >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
-						<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
+						<control-param name="parentNodeRef">workspace://SpacesStore/ab0e64a2-96a4-4c09-b316-d97b280a6ab3</control-param>
 					</control>
 				</field>
 				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio"  />
@@ -204,7 +209,7 @@
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
 					<!-- Configuramos la categorìa para que se inicie en el nodo de "Areas de Empresa" -->
-						<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
+						<control-param name="parentNodeRef">workspace://SpacesStore/7b6839e0-4b90-477f-b5aa-de44e415a70a</control-param>
 					</control>
 				</field>
 				<!--
@@ -212,6 +217,12 @@
 				-->
 				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
 				<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio"  />
+				<field id="rb:relevancia" label-id="prop.rb_relevancia" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/selectone.ftl" >
+							<control-param name="options">1|{label.alta},2|{label.media},3|{label.baja}</control-param>
+						</control>
+				</field>		
+				<field id="rb:revisado" label-id="prop.rb_revisado" set="datos_oficio"  />
 			   
 			   
                <field id="cm:originator" read-only="true" />
@@ -248,6 +259,9 @@
 				-->
 				<show id="rb:respondida" />
 				<show id="rb:personaResp" />
+				<!-- atributos de aspects si son aplicados -->
+				<show id="rb:relevancia" />
+				<show id="rb:revisado" />
 			   
 			   <!-- rb:oficio -->
 			   <show id="rb:documentosRelacionados" />
@@ -288,12 +302,12 @@
 				<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio"  >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
 					<!-- Configuramos la categorìa para que se inicie en el nodo de "Entidades" -->
-						<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
+						<control-param name="parentNodeRef">workspace://SpacesStore/ab0e64a2-96a4-4c09-b316-d97b280a6ab3</control-param>
 					</control>
 				</field>
 				<field id="rb:remitente" label-id="prop.rb_remitente" set="datos_oficio"  >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
-						<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
+						<control-param name="parentNodeRef">workspace://SpacesStore/ab0e64a2-96a4-4c09-b316-d97b280a6ab3</control-param>
 					</control>
 				</field>
 				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio"  />
@@ -306,15 +320,20 @@
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
 					<!-- Configuramos la categorìa para que se inicie en el nodo de "Areas de Empresa" -->
-						<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
+						<control-param name="parentNodeRef">workspace://SpacesStore/7b6839e0-4b90-477f-b5aa-de44e415a70a</control-param>
 					</control>
 				</field>
 				<!--
 				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" set="datos_oficio"  />
 				-->
 				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
-				
 				<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio"  />
+				<field id="rb:relevancia" label-id="prop.rb_relevancia" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/selectone.ftl" >
+							<control-param name="options">1|{label.alta},2|{label.media},3|{label.baja}</control-param>
+						</control>
+				</field>		
+				<field id="rb:revisado" label-id="prop.rb_revisado" set="datos_oficio"  />
 							   
 			   <field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  />
             </appearance>
@@ -342,11 +361,13 @@
 				-->
 				<show id="rb:respondida" />
 				<show id="rb:personaResp" />
+				<!-- atributos de aspects si son aplicados -->
+				<show id="rb:relevancia" />
+				<show id="rb:revisado" />
 				
 			   <!-- rb:oficio -->
 			   <show id="rb:documentosRelacionados" />				
-
-			   </field-visibility>
+			</field-visibility>
             <appearance>
 				<set id="datos_oficio" appearance="panel" label-id="panel.rb_datosOficio" />
                <field id="cm:name">
@@ -369,12 +390,12 @@
 				<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio"  >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
 					<!-- Configuramos la categorìa para que se inicie en el nodo de "Entidades" -->
-						<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
+						<control-param name="parentNodeRef">workspace://SpacesStore/ab0e64a2-96a4-4c09-b316-d97b280a6ab3</control-param>
 					</control>
 				</field>
 				<field id="rb:remitente" label-id="prop.rb_remitente" set="datos_oficio"  >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
-						<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
+						<control-param name="parentNodeRef">workspace://SpacesStore/ab0e64a2-96a4-4c09-b316-d97b280a6ab3</control-param>
 					</control>
 				</field>
 				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio"  />
@@ -387,7 +408,7 @@
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
 					<control template="/org/alfresco/components/form/controls/category.ftl"> 
 					<!-- Configuramos la categorìa para que se inicie en el nodo de "Areas de Empresa" -->
-						<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
+						<control-param name="parentNodeRef">workspace://SpacesStore/7b6839e0-4b90-477f-b5aa-de44e415a70a</control-param>
 					</control>
 				</field>
 				<!--
@@ -396,6 +417,12 @@
 				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
 				
 				<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio"  />
+				<field id="rb:relevancia" label-id="prop.rb_relevancia" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/selectone.ftl" >
+							<control-param name="options">1|{label.alta},2|{label.media},3|{label.baja}</control-param>
+						</control>
+				</field>		
+				<field id="rb:revisado" label-id="prop.rb_revisado" set="datos_oficio"  />
 							   
 			   <field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  />
             </appearance>
@@ -441,6 +468,9 @@
 					-->
 					<show id="rb:respondida" />
 					<show id="rb:personaResp" />
+					<!-- atributos de aspects si son aplicados -->
+					<show id="rb:relevancia" />
+					<show id="rb:revisado" />
 					
 				</field-visibility>
 				<appearance>
@@ -463,12 +493,12 @@
 					<field id="rb:destinatario" label-id="prop.rb_destinatario" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/category.ftl"> 
 						<!-- Configuramos la categorìa para que se inicie en el nodo de "Entidades" -->
-							<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
+							<control-param name="parentNodeRef">workspace://SpacesStore/ab0e64a2-96a4-4c09-b316-d97b280a6ab3</control-param>
 						</control>
 					</field>
 					<field id="rb:remitente" label-id="prop.rb_remitente" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/category.ftl"> 
-							<control-param name="parentNodeRef">workspace://SpacesStore/ed91cb98-e08b-4256-a182-a8644ce8d870</control-param>
+							<control-param name="parentNodeRef">workspace://SpacesStore/ab0e64a2-96a4-4c09-b316-d97b280a6ab3</control-param>
 						</control>
 					</field>
 					<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio" >
@@ -486,7 +516,7 @@
 					<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/category.ftl"> 
 						<!-- Configuramos la categorìa para que se inicie en el nodo de "Areas de Empresa" -->
-							<control-param name="parentNodeRef">workspace://SpacesStore/e46a1647-f1ef-4937-b9e2-b4b9ca867fba</control-param>
+							<control-param name="parentNodeRef">workspace://SpacesStore/7b6839e0-4b90-477f-b5aa-de44e415a70a</control-param>
 						</control>
 					</field>
 					<!--
@@ -500,7 +530,14 @@
 					<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/checkbox.ftl" />
 					</field>
-	
+					<field id="rb:relevancia" label-id="prop.rb_relevancia" set="datos_oficio" >
+						<control template="/org/alfresco/components/form/controls/selectone.ftl" >
+							<control-param name="options">1|{label.alta},2|{label.media},3|{label.baja}</control-param>
+						</control>
+					</field>					
+					<field id="rb:revisado" label-id="prop.rb_revisado" set="datos_oficio"   >
+						<control template="/org/alfresco/components/form/controls/checkbox.ftl" />
+					</field>
 				</appearance>
 			</form>
 		</forms>
