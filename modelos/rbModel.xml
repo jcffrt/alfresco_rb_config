@@ -148,9 +148,9 @@
 						<constraint type="LIST">
 							<parameter name="allowedValues">
 								<list>
-									<value>Alta</value>
-									<value>Media</value>
-									<value>Baja</value>
+									<value>1</value>
+									<value>2</value>
+									<value>3</value>
 								</list>
 							</parameter>
 							<parameter name="caseSensitive"><value>false</value></parameter>
