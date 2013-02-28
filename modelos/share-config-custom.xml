@@ -69,6 +69,7 @@
 				<!-- atributos de aspects si son aplicados -->
 				<show id="rb:relevancia" />
 				<show id="rb:revisado" />
+				<show id="rb:oficioCreado" />
 				<show id="rb:borradorContOk" />
 				<show id="rb:borradorJurOk" />
 				<show id="rb:aprobado" />
@@ -227,8 +228,13 @@
 						</control>
 				</field>		
 				<field id="rb:revisado" label-id="prop.rb_revisado" set="datos_oficio"  />
-				<field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  />
+				<field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>	
 				
+				<field id="rb:oficioCreado" label-id="prop.rb_oficioCreado" set="oficio_saliente" />
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />
 				<field id="rb:borradorJurOk" label-id="prop.rb_borradorJurOk" set="oficio_saliente" />
 				<field id="rb:aprobado" label-id="prop.rb_aprobado" set="oficio_saliente" />
@@ -271,6 +277,7 @@
 				<!-- atributos de aspects si son aplicados -->
 				<show id="rb:relevancia" />
 				<show id="rb:revisado" />
+				<show id="rb:oficioCreado" />
 				<show id="rb:borradorContOk" />
 				<show id="rb:borradorJurOk" />
 				<show id="rb:aprobado" />
@@ -349,7 +356,12 @@
 				</field>		
 				<field id="rb:revisado" label-id="prop.rb_revisado" set="datos_oficio"  />
 							   
-				<field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  />
+				<field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
+				<field id="rb:oficioCreado" label-id="prop.rb_oficioCreado" set="oficio_saliente" />
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />
 				<field id="rb:borradorJurOk" label-id="prop.rb_borradorJurOk" set="oficio_saliente" />
 				<field id="rb:aprobado" label-id="prop.rb_aprobado" set="oficio_saliente" />
@@ -383,6 +395,7 @@
 				<!-- atributos de aspects si son aplicados -->
 				<show id="rb:relevancia" />
 				<show id="rb:revisado" />
+				<show id="rb:oficioCreado" />
 				<show id="rb:borradorContOk" />
 				<show id="rb:borradorJurOk" />
 				<show id="rb:aprobado" />
@@ -448,7 +461,12 @@
 				</field>		
 				<field id="rb:revisado" label-id="prop.rb_revisado" set="datos_oficio"  />
 							   
-				<field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  />
+				<field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
+				<field id="rb:oficioCreado" label-id="prop.rb_oficioCreado" set="oficio_saliente" />
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />
 				<field id="rb:borradorJurOk" label-id="prop.rb_borradorJurOk" set="oficio_saliente" />
 				<field id="rb:aprobado" label-id="prop.rb_aprobado" set="oficio_saliente" />
