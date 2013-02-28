@@ -64,12 +64,12 @@
 				<!--
 				<show id="rb:persona_resp" />
 				-->
-				<show id="rb:respondida" />
 				<show id="rb:personaResp" />
+				<show id="rb:oficioCreado" />
+				<show id="rb:respondida" />
 				<!-- atributos de aspects si son aplicados -->
 				<show id="rb:relevancia" />
 				<show id="rb:revisado" />
-				<show id="rb:oficioCreado" />
 				<show id="rb:borradorContOk" />
 				<show id="rb:borradorJurOk" />
 				<show id="rb:aprobado" />
@@ -220,8 +220,9 @@
 				<!--
 				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" set="datos_oficio"  />
 				-->
-				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
 				<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio"  />
+				<field id="rb:oficioCreado" label-id="prop.rb_oficioCreado" set="datos_oficio" />
+				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
 				<field id="rb:relevancia" label-id="prop.rb_relevancia" set="datos_oficio"  >
 						<control template="/org/alfresco/components/form/controls/selectone.ftl" >
 							<control-param name="options">1|{label.alta},2|{label.media},3|{label.baja}</control-param>
@@ -234,7 +235,7 @@
 						</control>
 				</field>	
 				
-				<field id="rb:oficioCreado" label-id="prop.rb_oficioCreado" set="oficio_saliente" />
+
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />
 				<field id="rb:borradorJurOk" label-id="prop.rb_borradorJurOk" set="oficio_saliente" />
 				<field id="rb:aprobado" label-id="prop.rb_aprobado" set="oficio_saliente" />
@@ -272,12 +273,12 @@
 				<!--
 				<show id="rb:persona_resp" />
 				-->
+				<show id="rb:oficioCreado" />
 				<show id="rb:respondida" />
 				<show id="rb:personaResp" />
 				<!-- atributos de aspects si son aplicados -->
 				<show id="rb:relevancia" />
 				<show id="rb:revisado" />
-				<show id="rb:oficioCreado" />
 				<show id="rb:borradorContOk" />
 				<show id="rb:borradorJurOk" />
 				<show id="rb:aprobado" />
@@ -347,6 +348,7 @@
 				<!--
 				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" set="datos_oficio"  />
 				-->
+				<field id="rb:oficioCreado" label-id="prop.rb_oficioCreado" set="datos_oficio" />
 				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
 				<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio"  />
 				<field id="rb:relevancia" label-id="prop.rb_relevancia" set="datos_oficio"  >
@@ -361,7 +363,6 @@
 							<control-param name="showTargetLink">true</control-param>
 						</control>
 				</field>
-				<field id="rb:oficioCreado" label-id="prop.rb_oficioCreado" set="oficio_saliente" />
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />
 				<field id="rb:borradorJurOk" label-id="prop.rb_borradorJurOk" set="oficio_saliente" />
 				<field id="rb:aprobado" label-id="prop.rb_aprobado" set="oficio_saliente" />
@@ -390,12 +391,12 @@
 				<!--
 				<show id="rb:persona_resp" />
 				-->
+				<show id="rb:oficioCreado" />
 				<show id="rb:respondida" />
 				<show id="rb:personaResp" />
 				<!-- atributos de aspects si son aplicados -->
 				<show id="rb:relevancia" />
 				<show id="rb:revisado" />
-				<show id="rb:oficioCreado" />
 				<show id="rb:borradorContOk" />
 				<show id="rb:borradorJurOk" />
 				<show id="rb:aprobado" />
@@ -451,6 +452,7 @@
 				<!--
 				<field id="rb:persona_resp" label-id="prop.rb_persona_resp" set="datos_oficio"  />
 				-->
+				<field id="rb:oficioCreado" label-id="prop.rb_oficioCreado" set="datos_oficio" />
 				<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio"  />
 				
 				<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio"  />
@@ -466,7 +468,6 @@
 							<control-param name="showTargetLink">true</control-param>
 						</control>
 				</field>
-				<field id="rb:oficioCreado" label-id="prop.rb_oficioCreado" set="oficio_saliente" />
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />
 				<field id="rb:borradorJurOk" label-id="prop.rb_borradorJurOk" set="oficio_saliente" />
 				<field id="rb:aprobado" label-id="prop.rb_aprobado" set="oficio_saliente" />
@@ -513,6 +514,7 @@
 					<!--
 					<show id="rb:persona_resp" />
 					-->
+					<show id="rb:oficioCreado" />
 					<show id="rb:respondida" />
 					<show id="rb:personaResp" />
 					<!-- atributos de aspects si son aplicados -->
@@ -573,6 +575,9 @@
 					-->
 					<field id="rb:personaResp" label-id="assoc.rb_personaResp" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/authority.ftl" />
+					</field>
+					<field id="rb:oficioCreado" label-id="prop.rb_oficioCreado" set="datos_oficio" >
+						<control template="/org/alfresco/components/form/controls/checkbox.ftl" />
 					</field>
 					<field id="rb:respondida" label-id="prop.rb_respondida" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/checkbox.ftl" />
