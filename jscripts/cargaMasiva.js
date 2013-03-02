@@ -89,6 +89,28 @@ for (var i=0; i<arrData.length; i++)
 			logger.log(targetFile.qnamePath);
 			targetFile.properties["rb:tema"] = arrData[i][0];
 			logger.log(targetFile.properties["rb:tema"]);
+			switch (arrData[i][1]) {
+			case "RB":
+					targetFile.properties["rb:area_resp"] = catRB();
+				break;
+			case "TM":
+					targetFile.properties["rb:area_resp"] = catTM();
+				break;
+			case "LG":
+					targetFile.properties["rb:area_resp"] = catLG();
+				break;
+			}
+			switch (arrData[i][2]) {
+			case "RB":
+					targetFile.properties["rb:area_resp"] = catRB();
+				break;
+			case "TM":
+					targetFile.properties["rb:area_resp"] = catTM();
+				break;
+			case "LG":
+					targetFile.properties["rb:area_resp"] = catLG();
+				break;
+			}
 			//targetFile.properties["rb:remitente"] = arrData[i][1];
 			//targetFile.properties["rb:destinatario"] = arrData[i][2];
 			targetFile.properties["cm:description"] = arrData[i][3];
@@ -102,7 +124,39 @@ for (var i=0; i<arrData.length; i++)
               targetFile.properties["rb:fecha_resp"] = utils.fromISO8601(arrData[i][8]);
           	}
 			switch (arrData[i][9]) {
-			case "Tecnologia" 
+			case "calidad":
+					targetFile.properties["rb:area_resp"] = catCalidad();
+				break;
+			case "comunicacion":
+					targetFile.properties["rb:area_resp"] = catComunicacion();
+				break;
+			case "financiera":
+					targetFile.properties["rb:area_resp"] = catFinanciera();
+				break;
+			case "infraestructura":
+					targetFile.properties["rb:area_resp"] = catInfraestructura();
+				break;
+			case "instalaciones":
+					targetFile.properties["rb:area_resp"] = catInstalaciones();
+				break;
+			case "juridica":
+					targetFile.properties["rb:area_resp"] = catJuridica();
+				break;
+			case "negocio":
+					targetFile.properties["rb:area_resp"] = catNegocio();
+				break;
+			case "operaciones":
+					targetFile.properties["rb:area_resp"] = catOperaciones();
+				break;
+			case "presidencia":
+					targetFile.properties["rb:area_resp"] = catPresidencia();
+				break;
+			case "red externa":
+					targetFile.properties["rb:area_resp"] = catRedExterna();
+				break;
+			case "tecnologia":
+					targetFile.properties["rb:area_resp"] = catTecnologia();
+				break;
 			
 			}
             //targetFile.properties["rb:area_resp"] = arrData[i][9];
@@ -114,6 +168,70 @@ for (var i=0; i<arrData.length; i++)
           }
         }  
 		
-function catTecnologia(){
-	return utils.getNodeFromString("workspace://SpacesStore/98a44d8a-4803-4b5f-a7c7-55def12bfb76");
+function catComunicacion(){
+	return utils.getNodeFromString("workspace://SpacesStore/50ee2696-a100-4ba0-86e3-b2031c104ffb");
 }
+function catNegocio(){
+	return utils.getNodeFromString("workspace://SpacesStore/d2a132d2-bfa8-4f88-b44f-7e703d3de854");
+}
+function catFinanciera(){
+	return utils.getNodeFromString("workspace://SpacesStore/32132dd3-bbe4-4e04-97a9-59892ad83150");
+}
+function catJuridica(){
+	return utils.getNodeFromString("workspace://SpacesStore/5df90905-1dbd-41c7-8dfe-c8be7044eddb");
+}
+function catOperaciones(){
+	return utils.getNodeFromString("workspace://SpacesStore/3f2d7c59-7e04-4731-ace1-6c1ceb15a8de");
+}
+function catPresidencia(){
+	return utils.getNodeFromString("workspace://SpacesStore/059048af-aa82-4585-8aa9-8596dc28298e");
+}
+function catTecnologia(){
+	return utils.getNodeFromString("workspace://SpacesStore/b20b0cee-0b0e-4084-92d6-34d11d190eb9");
+}
+function catCalidad(){
+	return utils.getNodeFromString("workspace://SpacesStore/70790107-3b73-4a8a-a218-fa23febb425f");
+}
+function catDirTecnica(){
+	return utils.getNodeFromString("workspace://SpacesStore/b20b0cee-0b0e-4084-92d6-34d11d190eb9");
+}
+function catInstalaciones(){
+	return utils.getNodeFromString("workspace://SpacesStore/c603844d-ac98-4dff-9910-5249ea097dbb");
+}
+function catInfraestructura(){
+	return utils.getNodeFromString("workspace://SpacesStore/c637706c-6432-4e8b-b3eb-58b91f535e01");
+}
+function catFMS(){
+	return utils.getNodeFromString("workspace://SpacesStore/a5fbfc6d-b2f4-4a4e-819d-c471b4a65807");
+}
+function catFCS(){
+	return utils.getNodeFromString("workspace://SpacesStore/6fee1eb3-db8e-46a7-bfbc-d6137cb52398");
+}
+function catEstaciones(){
+	return utils.getNodeFromString("workspace://SpacesStore/c919c2d9-6a97-4780-929b-83b4e3dc4da8");
+}
+function catExpServicio(){
+	return utils.getNodeFromString("workspace://SpacesStore/69f68467-6dd4-4519-b44a-5050f2da9da9");
+}
+function catRRHH(){
+	return utils.getNodeFromString("workspace://SpacesStore/7478ec6a-6c2a-4e4c-a7c1-0f8dfdc0cd76");
+}
+function catProcControl(){
+	return utils.getNodeFromString("workspace://SpacesStore/2cc71e82-1360-4e5d-a87d-693591e196fb");
+}
+function catRedExterna(){
+	return utils.getNodeFromString("workspace://SpacesStore/2543379e-e335-4739-afe3-6a0da090ead7");
+}
+function catSegurFisica(){
+	return utils.getNodeFromString("workspace://SpacesStore/154eca93-3a22-40d7-a354-7c584497119a");
+}
+function catRB(){
+	return utils.getNodeFromString("workspace://SpacesStore/f79e2f01-23c4-4571-a001-1092bffde290");
+}
+function catTM(){
+	return utils.getNodeFromString("workspace://SpacesStore/784c794f-c3b1-4793-a706-2961e4248cc3");
+}
+function catLG(){
+	return utils.getNodeFromString("workspace://SpacesStore/5c21b474-bccb-4c2d-a9a3-83bb714821fa");
+}
+

@@ -1,0 +1,148 @@
+cm:TM
+cm:category
+workspace://SpacesStore/784c794f-c3b1-4793-a706-2961e4248cc3
+true
+cm:subcategories
+6
+
+cm:RB
+cm:category
+workspace://SpacesStore/f79e2f01-23c4-4571-a001-1092bffde290
+true
+cm:subcategories
+7
+
+cm:LG
+cm:category
+workspace://SpacesStore/5c21b474-bccb-4c2d-a9a3-83bb714821fa
+true
+cm:subcategories
+6
+
+
+
+
+
+Nombre de hijo
+Tipo de hijo
+Referencia de hijo
+Primario
+Tipo de asociación
+Índice
+cm:Comunicaciones
+cm:category
+workspace://SpacesStore/50ee2696-a100-4ba0-86e3-b2031c104ffb
+true
+cm:subcategories
+0
+cm:Desarrollo de Negocio
+cm:category
+workspace://SpacesStore/d2a132d2-bfa8-4f88-b44f-7e703d3de854
+true
+cm:subcategories
+1
+cm:Financiero Administrativo
+cm:category
+workspace://SpacesStore/32132dd3-bbe4-4e04-97a9-59892ad83150
+true
+cm:subcategories
+2
+cm:Jurídico
+cm:category
+workspace://SpacesStore/5df90905-1dbd-41c7-8dfe-c8be7044eddb
+true
+cm:subcategories
+3
+cm:Operaciones
+cm:category
+workspace://SpacesStore/3f2d7c59-7e04-4731-ace1-6c1ceb15a8de
+true
+cm:subcategories
+4
+cm:Presidencia
+cm:category
+workspace://SpacesStore/059048af-aa82-4585-8aa9-8596dc28298e
+true
+cm:subcategories
+5
+cm:Tecnología
+cm:category
+workspace://SpacesStore/b20b0cee-0b0e-4084-92d6-34d11d190eb9
+true
+cm:subcategories
+6
+cm:Calidad y Procesos
+cm:category
+workspace://SpacesStore/70790107-3b73-4a8a-a218-fa23febb425f
+true
+cm:subcategories
+2
+
+cm:Dirección Técnica
+cm:category
+workspace://SpacesStore/b20b0cee-0b0e-4084-92d6-34d11d190eb9
+true
+cm:subcategories
+
+cm:Instalaciones
+cm:category
+workspace://SpacesStore/c603844d-ac98-4dff-9910-5249ea097dbb
+true
+cm:subcategories
+0
+cm:Infraestructura
+cm:category
+workspace://SpacesStore/c637706c-6432-4e8b-b3eb-58b91f535e01
+true
+cm:subcategories
+1
+cm:Control de Flota
+cm:category
+workspace://SpacesStore/a5fbfc6d-b2f4-4a4e-819d-c471b4a65807
+true
+cm:subcategories
+2
+cm:Recaudo
+cm:category
+workspace://SpacesStore/6fee1eb3-db8e-46a7-bfbc-d6137cb52398
+true
+cm:subcategories
+3
+
+
+cm:Estaciones
+cm:category
+workspace://SpacesStore/c919c2d9-6a97-4780-929b-83b4e3dc4da8
+true
+cm:subcategories
+0
+cm:Experiencia Servicio
+cm:category
+workspace://SpacesStore/69f68467-6dd4-4519-b44a-5050f2da9da9
+true
+cm:subcategories
+1
+cm:Gestión Humana
+cm:category
+workspace://SpacesStore/7478ec6a-6c2a-4e4c-a7c1-0f8dfdc0cd76
+true
+cm:subcategories
+2
+cm:Procesos y Control
+cm:category
+workspace://SpacesStore/2cc71e82-1360-4e5d-a87d-693591e196fb
+true
+cm:subcategories
+3
+cm:Red Externa
+cm:category
+workspace://SpacesStore/2543379e-e335-4739-afe3-6a0da090ead7
+true
+cm:subcategories
+4
+cm:Seguridad Física
+cm:category
+workspace://SpacesStore/154eca93-3a22-40d7-a354-7c584497119a
+true
+cm:subcategories
+5

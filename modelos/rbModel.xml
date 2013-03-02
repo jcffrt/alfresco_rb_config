@@ -84,6 +84,14 @@
                         <tokenised>false</tokenised>
                     </index>	
                 </property>
+				<property name="rb:radicado_int	">
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>true</stored>
+                        <tokenised>true</tokenised>
+                    </index>	
+                </property>
                 <property name="rb:respuesta_req">
                     <type>d:boolean</type>
                     <index enabled="false">
@@ -102,15 +110,6 @@
                         <tokenised>true</tokenised>
                     </index>	
                 </property>
-                <!-- La quitamos como property y la ponemos como asociaciòn a authority (usuarios)
-				<property name="rb:persona_resp">
-                    <type>d:text</type>
-                    <index enabled="true">
-						<stored>true</stored>
-						<tokenised>true</tokenised>
-                    </index>	
-                </property>
-                -->
 				<property name="rb:respondida">
                     <type>d:boolean</type>
                     <index enabled="false">
@@ -134,6 +133,42 @@
                         <many>true</many>
 					</target>
                 </association>
+				<association name="rb:respondeA">
+                    <title>Responde a</title>
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+                    </source>
+                    <target>
+                        <class>rb:oficio</class>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+					</target>
+                </association>
+				<association name="rb:respondidoPor">
+                    <title>Es Respondido por</title>
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+                    </source>
+                    <target>
+                        <class>rb:oficio</class>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+					</target>
+                </association>
+				<child-association name="rb:anexosOficio">
+                    <title>Anexos Oficio</title>
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+                    </source>
+                    <target>
+                        <class>cm:content</class>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+					</target>
+                </child-association>
             </associations>
             <mandatory-aspects>
                 <aspect>rb:relevante</aspect>

@@ -58,12 +58,10 @@
 				<show id="rb:remitente" />
 				<show id="rb:radicado_ext" />
 				<show id="rb:fecha_radicado" />
+				<show id="rb:radicado_int" />
 				<show id="rb:respuesta_req" />
 				<show id="rb:fecha_resp" />
 				<show id="rb:area_resp" />
-				<!--
-				<show id="rb:persona_resp" />
-				-->
 				<show id="rb:personaResp" />
 				<show id="rb:oficioCreado" />
 				<show id="rb:respondida" />
@@ -156,6 +154,9 @@
 			   
 			   <!-- rb:oficio -->
 			   <show id="rb:documentosRelacionados" />
+			   <show id="rb:respodeA" />
+			   <show id="rb:respodidoPor" />
+			   <show id="rb:anexosOficio" />
 			   
             </field-visibility>
             <appearance>
@@ -209,6 +210,7 @@
 				</field>
 				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio"  />
 				<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" set="datos_oficio"  />
+				<field id="rb:radicado_int" label-id="prop.rb_radicado_int" set="datos_oficio"  />
 				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" set="datos_oficio"  />
 				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" set="datos_oficio"  />
 				<field id="rb:area_resp" label-id="prop.rb_area_resp" set="datos_oficio" >
@@ -233,7 +235,22 @@
 						<control template="/org/alfresco/components/form/controls/association.ftl" >
 							<control-param name="showTargetLink">true</control-param>
 						</control>
-				</field>	
+				</field>
+				<field id="rb:respondeA" label-id="assoc.rb_respondeA" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
+				<field id="rb:respondidoPor" label-id="assoc.rb_respondidoPor" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
+				<field id="rb:anexosOficio" label-id="assoc.rb_anexosOficio" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
 				
 
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />
@@ -267,6 +284,7 @@
 				<show id="rb:remitente" />
 				<show id="rb:radicado_ext" />
 				<show id="rb:fecha_radicado" />
+				<show id="rb:radicado_int" />
 				<show id="rb:respuesta_req" />
 				<show id="rb:fecha_resp" />
 				<show id="rb:area_resp" />
@@ -287,6 +305,9 @@
 			   
 			   <!-- rb:oficio -->
 			   <show id="rb:documentosRelacionados" />
+			   <show id="rb:respodeA" />
+			   <show id="rb:respodidoPor" />
+			   <show id="rb:anexosOficio" />
 			   
             </field-visibility>
             <edit-form template="../documentlibrary/forms/doclib-simple-metadata.ftl" />
@@ -334,6 +355,7 @@
 				</field>
 				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio"  />
 				<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" set="datos_oficio"  />
+				<field id="rb:radicado_int" label-id="prop.rb_radicado_int" set="datos_oficio"  />
 				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" set="datos_oficio"  />
 				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" set="datos_oficio"  />
 				<!--
@@ -363,6 +385,21 @@
 							<control-param name="showTargetLink">true</control-param>
 						</control>
 				</field>
+				<field id="rb:respondeA" label-id="assoc.rb_respondeA" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
+				<field id="rb:respondidoPor" label-id="assoc.rb_respondidoPor" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
+				<field id="rb:anexosOficio" label-id="assoc.rb_anexosOficio" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />
 				<field id="rb:borradorJurOk" label-id="prop.rb_borradorJurOk" set="oficio_saliente" />
 				<field id="rb:aprobado" label-id="prop.rb_aprobado" set="oficio_saliente" />
@@ -385,6 +422,7 @@
 				<show id="rb:remitente" />
 				<show id="rb:radicado_ext" />
 				<show id="rb:fecha_radicado" />
+				<show id="rb:radicado_int" />
 				<show id="rb:respuesta_req" />
 				<show id="rb:fecha_resp" />
 				<show id="rb:area_resp" />
@@ -404,7 +442,10 @@
 				<show id="rb:radicado" />
 				
 			   <!-- rb:oficio -->
-			   <show id="rb:documentosRelacionados" />				
+			   <show id="rb:documentosRelacionados" />
+			   <show id="rb:respodeA" />
+			   <show id="rb:respodidoPor" />
+			   <show id="rb:anexosOficio" />				
 			</field-visibility>
             <appearance>
 				<set id="datos_oficio" appearance="panel" label-id="panel.rb_datosOficio" />
@@ -438,6 +479,7 @@
 				</field>
 				<field id="rb:radicado_ext" label-id="prop.rb_radicado_ext" set="datos_oficio"  />
 				<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" set="datos_oficio"  />
+				<field id="rb:radicado_int" label-id="prop.rb_radicado_int" set="datos_oficio"  />
 				<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" set="datos_oficio"  />
 				<field id="rb:fecha_resp" label-id="prop.rb_fecha_resp" set="datos_oficio"  />
 				<!--
@@ -464,6 +506,21 @@
 				<field id="rb:revisado" label-id="prop.rb_revisado" set="datos_oficio"  />
 							   
 				<field id="rb:documentosRelacionados" label-id="assoc.rb_documentosRelacionados" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
+				<field id="rb:respondeA" label-id="assoc.rb_respondeA" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
+				<field id="rb:respondidoPor" label-id="assoc.rb_respondidoPor" set="datos_oficio"  >
+						<control template="/org/alfresco/components/form/controls/association.ftl" >
+							<control-param name="showTargetLink">true</control-param>
+						</control>
+				</field>
+				<field id="rb:anexosOficio" label-id="assoc.rb_anexosOficio" set="datos_oficio"  >
 						<control template="/org/alfresco/components/form/controls/association.ftl" >
 							<control-param name="showTargetLink">true</control-param>
 						</control>
@@ -508,6 +565,7 @@
 					<show id="rb:remitente" />
 					<show id="rb:radicado_ext" />
 					<show id="rb:fecha_radicado" />
+					<show id="rb:radicado_int" />
 					<show id="rb:respuesta_req" />
 					<show id="rb:fecha_resp" />
 					<show id="rb:area_resp" />
@@ -555,6 +613,9 @@
 					</field>
 					<field id="rb:fecha_radicado" label-id="prop.rb_fecha_radicado" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+					</field>
+					<field id="rb:radicado_int" label-id="prop.rb_radicado_int" set="datos_oficio" >
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
 					</field>
 					<field id="rb:respuesta_req" label-id="prop.rb_respuesta_req" set="datos_oficio" >
 						<control template="/org/alfresco/components/form/controls/checkbox.ftl" />
