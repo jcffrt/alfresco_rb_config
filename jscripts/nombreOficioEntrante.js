@@ -12,8 +12,21 @@ while (idStr.length < 10)
 {
 idStr = '0' + idStr ;
 }
-if ((document.properties["rb:remitente"].name != null)) && (document.properties["rb:radicado_ext"] != null))
+if ((document.properties["rb:remitente"] != null) && (document.properties["rb:radicado_ext"] != null))
 {
 document.name= document.properties["rb:remitente"].name + '-' + document.properties["rb:radicado_ext"] + '_RB-' + d.getFullYear() + '-' +idStr;
 document.save();
+}
+
+//Cambia el nombre de los posibles anexos que se hayan asociado
+for (var i in document.childAssocs["rb:anexosOficio"]) {
+	var anexo = document.childAssocs["rb:anexosOficio"][i];
+	//Ahora creamos la asociación en sentido inverso para que aparezca el enlace del padre en los anexos hijos del oficio
+	anexo.createAssociation(document, "rb:anexoDe");
+	if ((document.properties["rb:remitente"] != null) && (document.properties["rb:radicado_ext"] != null))
+	{
+      	var j=parseInt(i)+1;
+		anexo.name= document.properties["rb:remitente"].name + '-' + document.properties["rb:radicado_ext"] + '_RB-' + d.getFullYear() + '-' +idStr+ '_anexo('+(j)+')';
+	}
+	anexo.save();
 }

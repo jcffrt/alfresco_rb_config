@@ -21,13 +21,16 @@ var borrador=companyhome.childByNamePath("/sites/correspondencia/documentlibrary
 var docBorrador = plantilla.copy(borrador);
 
 //Se asocia este nuevo oficio al oficio entrante que lo originó
-docBorrador.createAssociation(document, "rb:documentosRelacionados");
+docBorrador.createAssociation(document, "rb:respondeA");
+document.createAssociation(docBorrador, "rb:respondidoPor");
 
-
+if (document.assocs["rb:personaResp"]!=null)
+{
 var personaResponsable = document.assocs["rb:personaResp"];
 var objetoPers=people.getPerson(personaResponsable[0].properties["cm:userName"]);
 docBorrador.createAssociation(objetoPers, "rb:personaResp");
-// logger.log(docBorrador.assocs["rb:personaResp"][0].properties["cm:userName"]);
+//logger.log(docBorrador.assocs["rb:personaResp"][0].properties["cm:userName"]);
+}
 
 //logger.log(copiaPlantilla.qnamePath);
 //var restype= copiaPlantilla.specializeType("rb:oficio");
@@ -76,6 +79,11 @@ docBorrador.properties["rb:fecha_resp"]=fecha_respuesta;
 docBorrador.save();
 //logger.log(resultado);
 
+//mete source associations
+//var respuesta=document.sourceAssocs["rb:documentosRelacionados"];
+//document.createAssociation(respuesta, "rb:documentosRelacionados");
+
+
 // Marca el oficio entrante dejando constancia que se ha creado el oficio saliente 
 document.properties["rb:oficioCreado"]=true;
 document.save();
@@ -95,5 +103,8 @@ document.save();
 
 //document.move(recordFolder);
 
+
+
 }
 //si ya estaba creado el oficio saliente. no hacemos nada
+
