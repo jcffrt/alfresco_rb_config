@@ -22,11 +22,15 @@ document.save();
 for (var i in document.childAssocs["rb:anexosOficio"]) {
 	var anexo = document.childAssocs["rb:anexosOficio"][i];
 	//Ahora creamos la asociación en sentido inverso para que aparezca el enlace del padre en los anexos hijos del oficio
-	anexo.createAssociation(document, "rb:anexoDe");
-	if ((document.properties["rb:remitente"] != null) && (document.properties["rb:radicado_ext"] != null))
+	//anexo.createAssociation(document, "rb:anexoDe");
+  	if ((document.properties["rb:remitente"] != null) && (document.properties["rb:radicado_ext"] != null))
 	{
       	var j=parseInt(i)+1;
 		anexo.name= document.properties["rb:remitente"].name + '-' + document.properties["rb:radicado_ext"] + '_RB-' + d.getFullYear() + '-' +idStr+ '_anexo('+(j)+')';
 	}
+	var asociado = companyhome.childByNamePath("/sites/correspondencia/documentlibrary/Oficios entrantes/Anexos/"+anexo.name);
+  	//logger.log(asociado.name);
+  	//asociado..createAssociation(document, "rb:anexoDe");
 	anexo.save();
 }
+

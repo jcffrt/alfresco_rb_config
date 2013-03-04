@@ -254,6 +254,7 @@
 				<field id="rb:anexosOficio" label-id="assoc.rb_anexosOficio" set="datos_oficio"  >
 						<control template="/org/alfresco/components/form/controls/association.ftl" >
 							<control-param name="showTargetLink">true</control-param>
+							<control-param name="startLocation">{parent}</control-param>
 						</control>
 				</field>
 				
@@ -403,6 +404,7 @@
 				<field id="rb:anexosOficio" label-id="assoc.rb_anexosOficio" set="datos_oficio"  >
 						<control template="/org/alfresco/components/form/controls/association.ftl" >
 							<control-param name="showTargetLink">true</control-param>
+							<control-param name="startLocation">{parent}</control-param>
 						</control>
 				</field>
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />
@@ -528,6 +530,7 @@
 				<field id="rb:anexosOficio" label-id="assoc.rb_anexosOficio" set="datos_oficio"  >
 						<control template="/org/alfresco/components/form/controls/association.ftl" >
 							<control-param name="showTargetLink">true</control-param>
+							<control-param name="startLocation">{parent}</control-param>
 						</control>
 				</field>
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />
@@ -692,6 +695,7 @@
 				<field id="rb:anexoDe" label-id="assoc.rb_anexoDe" set="datos_oficio"  >
 						<control template="/org/alfresco/components/form/controls/association.ftl" >
 							<control-param name="showTargetLink">true</control-param>
+							<control-param name="startLocation">{parent}</control-param>
 						</control>
 				</field>
 				
@@ -771,6 +775,7 @@
 				<field id="rb:anexoDe" label-id="assoc.rb_anexoDe" set="datos_oficio"  >
 						<control template="/org/alfresco/components/form/controls/association.ftl" >
 							<control-param name="showTargetLink">true</control-param>
+							<control-param name="startLocation">{parent}</control-param>
 						</control>
 				</field>
 
@@ -817,6 +822,7 @@
 				<field id="rb:anexoDe" label-id="assoc.rb_anexoDe" set="datos_oficio"  >
 						<control template="/org/alfresco/components/form/controls/association.ftl" >
 							<control-param name="showTargetLink">true</control-param>
+							<control-param name="startLocation">{parent}</control-param>
 						</control>
 				</field>
 				<field id="rb:borradorContOk" label-id="prop.rb_borradorContOk" set="oficio_saliente" />

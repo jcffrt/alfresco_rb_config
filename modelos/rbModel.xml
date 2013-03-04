@@ -57,7 +57,8 @@
                         <atomic>true</atomic>
                         <stored>true</stored>
                         <tokenised>true</tokenised>
-                    </index>	
+                    </index>
+					<mandatory enforced='false'>true</mandatory>
                 </property>
 				<property name="rb:remitente">
                     <type>d:category</type>
@@ -65,7 +66,8 @@
                         <atomic>true</atomic>
                         <stored>true</stored>
                         <tokenised>true</tokenised>
-                    </index>	
+                    </index>
+					<mandatory enforced='false'>true</mandatory>
                 </property>
                 <property name="rb:radicado_ext">
                     <type>d:text</type>

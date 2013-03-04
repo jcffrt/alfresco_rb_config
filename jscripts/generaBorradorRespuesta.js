@@ -1,7 +1,7 @@
 //Genera un borrador de oficio saliente en la carpeta de borradores como respuesta a un oficio entrante SI no se ha creado ya (oficioCreado = false)
 // Le asigna un num único de registro interno
 
-if (document.properties["rb:oficioCreado"] == false)
+if ((document.properties["rb:oficioCreado"] == false)&&(document.properties["rb:remitente"] !=null))
 {
 
 if (document.properties["rb:remitente"].name == 'TM')
@@ -107,4 +107,3 @@ document.save();
 
 }
 //si ya estaba creado el oficio saliente. no hacemos nada
-
