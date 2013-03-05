@@ -114,6 +114,7 @@ for (var i=0; i<arrData.length; i++)
 			//targetFile.properties["rb:remitente"] = arrData[i][1];
 			//targetFile.properties["rb:destinatario"] = arrData[i][2];
 			targetFile.properties["cm:description"] = arrData[i][3];
+			targetFile.properties["cm:radicado_int"] = arrData[i][4];
 			targetFile.properties["rb:radicado_ext"] = arrData[i][5];
             logger.log(arrData[i][6]);
 			targetFile.properties["rb:fecha_radicado"] = utils.fromISO8601(arrData[i][6]);

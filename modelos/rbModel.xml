@@ -16,6 +16,20 @@
     <namespaces>
         <namespace uri="http://www.rbsas.co/model/content/1.0" prefix="rb" />
     </namespaces>
+	<constraints>
+      <constraint name="rb:lista_fases" type="LIST">
+         <parameter name="allowedValues">
+            <list>
+               <value>Borrador contenido</value>
+               <value>Borrador legal</value>
+               <value>Aprobar</value>
+               <value>Firma</value>
+			   <value>Radicado-captura</value>
+			   <value>Completado</value>
+            </list>
+         </parameter>
+      </constraint>
+	</constraints>
     <types>
         <!-- Enterprise-wide generic document type -->
         <type name="rb:doc">
@@ -259,6 +273,21 @@
 			-->
             </mandatory-aspects>
         </type>
+		      <!-- Data List - Advanced Tasks List -->
+      <type name="rb:tareas_oficios">
+         <title>Tareas de oficios</title>
+         <parent>dl:task</parent>
+         <properties>
+            <property name="dl:fase_oficio">
+               <title>Fase Oficio</title>
+               <type>d:text</type>
+               <default>Normal</default>
+               <constraints>
+                  <constraint ref="rb:lista_fases" />
+               </constraints>
+            </property>
+         </properties>
+      </type>
     </types>
     <aspects>
         <aspect name="rb:relevante">

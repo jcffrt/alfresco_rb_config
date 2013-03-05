@@ -957,6 +957,94 @@
 		</forms>
 	</config>				
 		
+		
+<!-- SECCION PARA DATALIST -->
+   <!-- rb:tareas_oficios type create form config-->
+   <!-- An example of an optional custom new/edit item template (see dl_task.ftl) -->
+   <config evaluator="model-type" condition="rb:tareas_oficios">
+      <forms>
+         <!-- Create item form -->
+         <form>
+            <field-visibility>
+               <!-- cm:titled aspect -->
+               <show id="cm:title" />
+               <show id="cm:description" />
+               <!-- dl:gantt aspect -->
+               <show id="dl:ganttStartDate" />
+               <show id="dl:ganttEndDate" />
+               <!-- dl:task type-->
+               <show id="dl:taskAssignee" />
+               <show id="dl:taskPriority" />
+			   <show id="rb:fase_oficio" />
+               <show id="dl:taskStatus" />
+               <!-- dl:gantt aspect -->
+               <show id="dl:ganttPercentComplete" />
+               <!-- dl:task type -->
+               <show id="dl:taskComments" />
+               <!-- cm:attachable aspect -->
+               <show id="cm:attachments" />
+            </field-visibility>
+            <create-form template="../data-lists/forms/dl_task.ftl" />
+            <appearance>
+               <field id="cm:title">
+                  <control template="/org/alfresco/components/form/controls/textfield.ftl" />
+               </field>
+			   <field id="rb:fase_oficio" label-id="prop.rb_fase_oficio"  />
+               <field id="dl:taskComments">
+                  <control template="/org/alfresco/components/form/controls/textarea.ftl" />
+               </field>
+               <field id="cm:attachments">
+                  <control>
+                    <control-param name="startLocation">{doclib}</control-param>
+                  </control>
+               </field>
+            </appearance>
+         </form>
+      </forms>
+   </config>
 
+   
+   <!-- rb:tarea_oficio type edit form config-->
+   <config evaluator="node-type" condition="rb:tareas_oficios">
+      <forms>
+         <!-- Data List pop-up edit form -->
+         <form>
+            <field-visibility>
+               <!-- cm:titled aspect -->
+               <show id="cm:title" />
+               <show id="cm:description" />
+               <!-- dl:gantt aspect -->
+               <show id="dl:ganttStartDate" />
+               <show id="dl:ganttEndDate" />
+               <!-- dl:task type-->
+               <show id="dl:taskAssignee" />
+               <show id="dl:taskPriority" />
+			   <show id="rb:fase_oficio" />
+               <show id="dl:taskStatus" />
+               <!-- dl:gantt aspect -->
+               <show id="dl:ganttPercentComplete" />
+               <!-- dl:task type -->
+               <show id="dl:taskComments" />
+               <!-- cm:attachable aspect -->
+               <show id="cm:attachments" />
+            </field-visibility>
+            <edit-form template="../data-lists/forms/dl_task.ftl" />
+            <appearance>
+               <field id="cm:title">
+                  <control template="/org/alfresco/components/form/controls/textfield.ftl" />
+               </field>
+			   <field id="rb:fase_oficio" label-id="prop.rb_fase_oficio"  />
+               <field id="dl:taskComments">
+                  <control template="/org/alfresco/components/form/controls/textarea.ftl" />
+               </field>
+               <field id="cm:attachments">
+                  <control>
+                    <control-param name="startLocation">{doclib}</control-param>
+                  </control>
+               </field>
+            </appearance>
+         </form>
+      </forms>
+   </config>
 
 </alfresco-config>
