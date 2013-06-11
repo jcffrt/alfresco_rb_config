@@ -984,14 +984,14 @@
                <!-- cm:attachable aspect -->
                <show id="cm:attachments" />
             </field-visibility>
-            <create-form template="../data-lists/forms/dl_task.ftl" />
+            <create-form template="../data-lists/forms/dataitem.ftl" />
             <appearance>
                <field id="cm:title">
                   <control template="/org/alfresco/components/form/controls/textfield.ftl" />
                </field>
 			   <field id="rb:fase_oficio" label-id="prop.rb_fase_oficio"  />
                <field id="dl:taskComments">
-                  <control template="/org/alfresco/components/form/controls/textarea.ftl" />
+                  <control template="/org/alfresco/components/form/controls/selectone.ftl" />
                </field>
                <field id="cm:attachments">
                   <control>
@@ -1028,12 +1028,17 @@
                <!-- cm:attachable aspect -->
                <show id="cm:attachments" />
             </field-visibility>
-            <edit-form template="../data-lists/forms/dl_task.ftl" />
+            <!--
+			<edit-form template="../data-lists/forms/dl_task.ftl" />
+			-->
+			<edit-form template="../data-lists/forms/dataitem.ftl" />
             <appearance>
                <field id="cm:title">
                   <control template="/org/alfresco/components/form/controls/textfield.ftl" />
                </field>
-			   <field id="rb:fase_oficio" label-id="prop.rb_fase_oficio"  />
+			   <field id="rb:fase_oficio" label-id="prop.rb_fase_oficio" >
+			    <control template="/org/alfresco/components/form/controls/selectone.ftl" />
+				</field>
                <field id="dl:taskComments">
                   <control template="/org/alfresco/components/form/controls/textarea.ftl" />
                </field>

@@ -1,3 +1,5 @@
+//Script para importar oficios RB existentes - carga metadatos desde un csv con el formato adecuado
+
 var CSVFile = companyhome.childByNamePath("/sites/correspondencia/documentlibrary/MetaData.csv");
 var strData = CSVFile.content;
 var strDelimiter = ";";
@@ -75,55 +77,71 @@ var strDelimiter = ";";
 			arrData[ arrData.length - 1 ].push( strMatchedValue );
 		} 
  
- 
-print(arrData);
+//print(arrData); 
  
 for (var i=0; i<arrData.length; i++)
 	{
-          var fileName = arrData[i][13] + '.pdf'; 
-      		logger.log(fileName);
-      		logger.log(space.qnamePath);
+          var fileName = arrData[i][13] + ''; 
+      		//logger.log(fileName);
+      		//logger.log(space.qnamePath);
           var targetFile = space.childByNamePath(fileName); 
           if (targetFile != null)
           { 
-			logger.log(targetFile.qnamePath);
+            targetFile.specializeType("rb:oficio");
+            logger.log('MATCH FILE: ');
+            logger.log(targetFile.qnamePath);
 			targetFile.properties["rb:tema"] = arrData[i][0];
-			logger.log(targetFile.properties["rb:tema"]);
+            targetFile.properties["cm:title"] = arrData[i][0];
+            targetFile.properties["cm:name"] = arrData[i][14];
+            
+            logger.log('DATA:');
+            logger.log(targetFile.properties["rb:tema"]);
 			switch (arrData[i][1]) {
 			case "RB":
-					targetFile.properties["rb:area_resp"] = catRB();
+					targetFile.properties["rb:remitente"] = catRB();
 				break;
 			case "TM":
-					targetFile.properties["rb:area_resp"] = catTM();
+					targetFile.properties["rb:remitente"] = catTM();
 				break;
 			case "LG":
-					targetFile.properties["rb:area_resp"] = catLG();
+					targetFile.properties["rb:remitente"] = catLG();
 				break;
 			}
 			switch (arrData[i][2]) {
 			case "RB":
-					targetFile.properties["rb:area_resp"] = catRB();
+					targetFile.properties["rb:destinatario"] = catRB();
+                	targetFile.properties["rb:revisado"] = true;
 				break;
 			case "TM":
-					targetFile.properties["rb:area_resp"] = catTM();
+					targetFile.properties["rb:destinatario"] = catTM();
 				break;
 			case "LG":
-					targetFile.properties["rb:area_resp"] = catLG();
+					targetFile.properties["rb:destinatario"] = catLG();
 				break;
 			}
-			//targetFile.properties["rb:remitente"] = arrData[i][1];
-			//targetFile.properties["rb:destinatario"] = arrData[i][2];
+            logger.log('Remitente: ');
+            logger.log(targetFile.properties["rb:remitente"].name);
+            logger.log('destinatario: ');
+            logger.log(targetFile.properties["rb:destinatario"].name);
+            //targetFile.properties["rb:remitente"] = arrData[i][1];
+            //targetFile.properties["rb:destinatario"] = arrData[i][2];
 			targetFile.properties["cm:description"] = arrData[i][3];
-			targetFile.properties["cm:radicado_int"] = arrData[i][4];
+			targetFile.properties["rb:radicado_int"] = arrData[i][4];
 			targetFile.properties["rb:radicado_ext"] = arrData[i][5];
-            logger.log(arrData[i][6]);
+            //logger.log(arrData[i][6]);
 			targetFile.properties["rb:fecha_radicado"] = utils.fromISO8601(arrData[i][6]);
-			targetFile.properties["rb:respuesta_req"] = arrData[i][7];
-			logger.log(arrData[i][8]);
+            logger.log('Fecha radicado: ');
+            logger.log(targetFile.properties["rb:fecha_radicado"]);
+            if (arrData[i][7]=='VERDADERO') {
+				targetFile.properties["rb:respuesta_req"] = true;
+            }
+			//logger.log(arrData[i][8]);
             if (arrData[i][8] != '')
             {  
               targetFile.properties["rb:fecha_resp"] = utils.fromISO8601(arrData[i][8]);
           	}
+            logger.log('Fecha respuesta: ');
+            logger.log(targetFile.properties["rb:fecha_resp"]);
 			switch (arrData[i][9]) {
 			case "calidad":
 					targetFile.properties["rb:area_resp"] = catCalidad();
@@ -158,13 +176,31 @@ for (var i=0; i<arrData.length; i++)
 			case "tecnologia":
 					targetFile.properties["rb:area_resp"] = catTecnologia();
 				break;
-			
 			}
+            logger.log('Area responsable: ');
+            logger.log(targetFile.properties["rb:area_resp"].name);
             //targetFile.properties["rb:area_resp"] = arrData[i][9];
 			//targetFile.properties["rb:persona_resp"] = arrData[i][10];
-			targetFile.properties["rb:respondida"] = arrData[i][11];
-
-			        
+            if ( arrData[i][11] == 'VERDADERO') {
+			targetFile.properties["rb:respondida"] = true;
+            }
+            logger.log('Respondida: ');
+            logger.log(targetFile.properties["rb:respondida"]);
+            
+            targetFile.properties["rb:oficioCreado"] = true;
+			
+            if (targetFile.hasAspect("rma:record")) {
+            	targetFile.properties["rma:originator"]="Consultoría Legal";
+            	targetFile.properties["rma:originatingOrganization"]="Recaudo Bogotá SAS";
+            	targetFile.properties["rma:publicationDate"]=targetFile.properties["rb:fecha_radicado"]; //new Date("12/29/2009")
+            	targetFile.properties["rma:dateFiled"] = new Date();
+              	//targetFile.addAspect("rma:declaredRecord");
+              	targetFile.save();
+              	var declara = actions.create("declareRecord");
+              	declara.execute(targetFile);
+            }
+              
+            
             targetFile.save();          
           }
         }  
@@ -235,4 +271,3 @@ function catTM(){
 function catLG(){
 	return utils.getNodeFromString("workspace://SpacesStore/5c21b474-bccb-4c2d-a9a3-83bb714821fa");
 }
-
